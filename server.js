@@ -8,10 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb://127.0.0.1:27017/ecommerce', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('MongoDB Connected'))
+mongoose.connect('mongodb://127.0.0.1:27017/ecommerce').then(() => console.log('MongoDB Connected'))
   .catch((err) => console.log(err));
 
 // Product Schema
